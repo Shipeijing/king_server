@@ -5,7 +5,6 @@ const Controller = require('egg').Controller;
 class UserController extends Controller {
   async login() {
     const { ctx, service } = this;
-	console.log(ctx.query )
     const userId = ctx.query.id;
     const result = await service.user.login(userId);
     ctx.body = result;
